@@ -4,7 +4,7 @@ export default {
     return fetch(request, {
       headers: {
         'Content-Type': 'text/html',
-        'Cache-Control': 'public, max-age=3600'
+        'X-Content-Type-Options': 'nosniff'
       }
     });
   }

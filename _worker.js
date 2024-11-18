@@ -3,8 +3,7 @@ export default {
     const url = new URL(request.url);
     return fetch(request, {
       headers: {
-        'Content-Type': 'text/html',
-        'X-PHP-Handler': 'enabled'
+        'Content-Type': 'text/html'
       }
     });
   }

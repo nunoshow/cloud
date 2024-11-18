@@ -1,13 +1,11 @@
 export default {
   async fetch(request) {
-    const url = new URL(request.url);
-    return fetch(request, {
-      cf: {
-        minify: { html: true, css: true, js: true },
-        cacheEverything: true,
-        cacheTtl: 3600
+    return new Response(null, {
+      status: 302,
+      headers: {
+        'Location': request.url,
+        'Cache-Control': 'no-cache'
       }
     });
   }
 }
-

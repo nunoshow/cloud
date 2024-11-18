@@ -3,12 +3,11 @@ export default {
     const url = new URL(request.url);
     return fetch(request, {
       cf: {
-        minify: {
-          html: true,
-          css: true,
-          js: true
-        }
+        minify: { html: true, css: true, js: true },
+        cacheEverything: true,
+        cacheTtl: 3600
       }
     });
   }
 }
+

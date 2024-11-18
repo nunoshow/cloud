@@ -27,5 +27,5 @@ if (!defined('ABSPATH')) {
 }
 
 require_once(ABSPATH . 'wp-settings.php');
-define('WP_HOME', 'https://wordpress-dak.pages.dev');
-define('WP_SITEURL', 'https://wordpress-dak.pages.dev');
+define('WP_HOME', 'https://cloud-a56.pages.dev');
+define('WP_SITEURL', 'https://cloud-a56.pages.dev');

@@ -1,9 +1,10 @@
 export default {
   async fetch(request) {
+    const url = new URL(request.url);
     return fetch(request, {
-      cf: {
-        cacheEverything: true,
-        cacheTtl: 3600
+      headers: {
+        'Content-Type': 'text/html',
+        'Cache-Control': 'public, max-age=3600'
       }
     });
   }

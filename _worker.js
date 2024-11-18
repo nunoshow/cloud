@@ -4,7 +4,7 @@ export default {
     return fetch(request, {
       headers: {
         'Content-Type': 'text/html',
-        'X-Content-Type-Options': 'nosniff'
+        'X-PHP-Handler': 'enabled'
       }
     });
   }

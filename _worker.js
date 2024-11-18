@@ -1,10 +1,10 @@
 export default {
   async fetch(request) {
-    return new Response(null, {
-      status: 302,
-      headers: {
-        'Location': request.url,
-        'Cache-Control': 'no-cache'
+    const url = new URL(request.url);
+    return fetch(request, {
+      cf: {
+        cacheEverything: true,
+        cacheTtl: 3600
       }
     });
   }
